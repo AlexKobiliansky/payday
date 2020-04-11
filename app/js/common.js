@@ -44,6 +44,29 @@ $(document).ready(function(){
     //***** end mobile-mnu customization *****//
 
 
+    function heightses() {
+        $('.advantage-item-title').height('auto').equalHeights();
+        $('.advantage-item-desc').height('auto').equalHeights();
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    setTimeout(function(){
+        heightses();
+    }, 300);
+
+    $('.advantages-slider').owlCarousel({
+        nav: false,
+        items: 1,
+        margin: 30,
+        dots: false,
+        autoHeight: true,
+        autoWidth: true,
+        loop: true
+    });
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
