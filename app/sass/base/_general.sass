@@ -13,7 +13,7 @@
   color: #666
 
 ::selection
-  background-color: $accent
+  background-color: $accent-blue
   color: #fff
 
 body
@@ -24,6 +24,7 @@ body
   font-family: $default-font
   overflow-x: hidden
   color: $text
+  background-color: #F8F8F8
   input, textarea
     border: #666 1px solid
     outline: none
@@ -48,7 +49,7 @@ a:hover, a:active, a:focus
   text-decoration: none
 
 a
-  color: $accent
+  color: $accent-blue
   text-decoration: none
 
 a, li, button
@@ -61,13 +62,27 @@ ul
 
 .hidden
   display: none!important
-
-//pixel-glass custom
-//html
-//  background-repeat: no-repeat
-//  background-position: 50% 0
-//  background-image: url('../img/layout/test.png')
-
 // ======= END TEMPLATE STYLES =======
+.btn
+  line-height: 17px
+  font-size: 14px
+  font-weight: 700
+  text-align: center
+  display: inline-block
+  white-space: nowrap
+  padding: 14px 35px
+  +mt(.3s)
+  border-radius: 5px
+
+.btn-blue
+  color: #fff
+  background-color: $accent-blue
+  &:focus, &:active
+    color: #fff
+  &:hover
+    color: #fff
+    background-color: lighten($accent-blue, 10%)
+
+
 
 
