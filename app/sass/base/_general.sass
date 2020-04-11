@@ -73,6 +73,9 @@ ul
   padding: 14px 35px
   +mt(.3s)
   border-radius: 5px
+  box-shadow: none
+  border: none
+  cursor: pointer
 
 .btn-blue
   color: #fff
@@ -82,6 +85,21 @@ ul
   &:hover
     color: #fff
     background-color: lighten($accent-blue, 10%)
+
+form
+  label
+    display: block
+  input
+    width: 100%
+    font-size: 14px
+    line-height: 1.5
+    color: $text
+    padding: 17px 30px
+    border: none
+    box-shadow: none
+    border-radius: 5px
+    &::placeholder
+      color: $text
 
 
 
