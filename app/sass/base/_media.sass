@@ -6,6 +6,21 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-how
+    padding-top: 50px
+    padding-bottom: 50px
+
+  .how-navs-wrap
+    margin-bottom: 40px
+
+  .how-nav
+    margin-right: 15px
+    width: 140px
+
+  .how-item
+    &-content
+      width: 440px
+
   .s-advantages
     padding-top: 50px
 
@@ -34,6 +49,26 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .how-item
+    &-title
+      font-size: 24px
+    &-content
+      margin-right: 120px
+    &-img
+      &:before
+        width: 300px
+        height: 310px
+        top: calc(50% - 140px)
+        left: calc(50% - 164px)
+      &:after
+        width: 310px
+        height: 275px
+        top: calc(50% - 140px)
+        left: calc(50% - 155px)
+
+  .how-navs-wrap
+    display: none
 
   .advantage-item
     width: calc(50% - 15px)
@@ -70,6 +105,24 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .how-item
+    flex-direction: column
+    &-img
+      &:before
+        width: 360px
+        height: 378px
+        top: calc(50% - 180px)
+        left: calc(50% - 194px)
+      &:after
+        width: 388px
+        height: 345px
+        top: calc(50% - 172px)
+        left: calc(50% - 194px)
+    &-content
+      width: 100%
+      margin-right: 0
+      margin-bottom: 30px
+
   .section-title
     font-size: 24px
 
@@ -105,6 +158,41 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-how
+    padding-top: 30px
+    padding-bottom: 60px
+
+  .how-navs-slider
+    width: calc(100% + 15px)
+    margin-bottom: 30px
+
+  .how-nav
+    width: 115px
+    font-size: 14px
+
+  .how-item
+    &-img
+      img
+        width: 160px
+      &:before
+        width: 238px
+        height: 247px
+        top: calc(50% - 119px)
+        left: calc(50% - 129px)
+      &:after
+        width: 244px
+        height: 216px
+        top: calc(50% - 108px)
+        left: calc(50% - 124px)
+    &-title
+      font-size: 18px
+      margin-bottom: 14px
+    &-desc
+      font-size: 14px
+
+
+
 
   .advantages-slider
     width: calc(100% + 15px)

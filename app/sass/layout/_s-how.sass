@@ -1,0 +1,68 @@
+.s-how
+  padding-top: 100px
+  padding-bottom: 106px
+  overflow: hidden
+
+.how-nav
+  display: inline-block
+  vertical-align: top
+  font-size: 16px
+  line-height: 1.5
+  color: $text
+  font-weight: 700
+  text-align: center
+  width: 165px
+  padding: 11px
+  background-color: $accent-lightblue
+  border-radius: 5px
+  +mt(.3s)
+  margin-right: 30px
+  &:last-child
+    margin-right: 0
+  &:hover
+    background-color: $accent-blue
+    color: #fff
+
+.how-navs-wrap
+  margin-bottom: 70px
+
+.how-item
+  display: flex
+  align-items: center
+  &-content
+    width: 477px
+    margin-right: 185px
+  &-title
+    font-size: 30px
+    font-weight: 700
+    margin-bottom: 15px
+  &-desc
+    font-size: 18px
+  &-img
+    position: relative
+    &:before, &:after
+      content: ''
+      position: absolute
+      +bg-cover
+    &:before
+      background-image: url('../img/how-before-img.png')
+      width: 360px
+      height: 378px
+      top: calc(50% - 180px)
+      left: calc(50% - 194px)
+    &:after
+      z-index: 2
+      width: 388px
+      height: 345px
+      top: calc(50% - 172px)
+      left: calc(50% - 194px)
+      background-image: url('../img/how-after-img.png')
+    img
+      position: relative
+      z-index: 3
+
+.how-navs-slider
+  margin-bottom: 40px
+
+
+
