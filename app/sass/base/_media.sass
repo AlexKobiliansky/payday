@@ -6,6 +6,10 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-partners
+    padding-top: 50px
+    padding-bottom: 20px
+
   .s-features
     padding-top: 50px
 
@@ -56,6 +60,16 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .partners-wrap
+    justify-content: flex-start
+
+
+  .partner-item
+    width: calc(33.33333% - 20px)
+    margin-right: 30px
+    &:nth-child(3n)
+      margin-right: 0
 
   .section-form
     width: 100%
@@ -176,6 +190,28 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-partners
+    padding-top: 60px
+    padding-bottom: 60px
+    .section-title
+      margin-bottom: 30px
+      font-size: 20px
+
+  .partner-item
+    width: 165px
+    margin-bottom: 0
+    margin-right: 0
+    height: 95px
+    img
+      max-height: 100%!important
+      width: auto!important
+
+  .partners-slider
+    width: calc(100% + 15px)
+
+  .partners-wrap
+    display: none
 
   .s-features
     padding-top: 60px

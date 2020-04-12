@@ -48,6 +48,7 @@ $(document).ready(function(){
         $('.advantage-item-title').height('auto').equalHeights();
         $('.advantage-item-desc').height('auto').equalHeights();
         $('.feature-item').height('auto').equalHeights();
+        $('.partner-item').height('auto').equalHeights();
     }
 
     $(window).resize(function() {
@@ -101,6 +102,15 @@ $(document).ready(function(){
                 margin: 30
             }
         }
+    });
+
+    $('.partners-slider').owlCarousel({
+        nav: false,
+        items: 1,
+        margin: 8,
+        dots: false,
+        autoWidth: true,
+        loop: true,
     });
 
     $('.checkbox-label input').styler();
