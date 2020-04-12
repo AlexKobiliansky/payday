@@ -6,6 +6,15 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-steps
+    .section-title
+      margin-bottom: 50px
+
+  .step-item
+    font-size: 17px
+    &:after
+      display: none!important
+
   .s-partners
     padding-top: 50px
     padding-bottom: 20px
@@ -60,6 +69,23 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .step-item
+    padding-right: 30px
+    font-size: 16px
+
+  .steps-form
+    width: 100%
+    label
+      width: 50%
+      input
+        padding-top: 17px
+        padding-bottom: 17px
+    .btn
+      padding-top: 19px
+      padding-bottom: 19px
+      width: calc(50% - 30px)
+
 
   .partners-wrap
     justify-content: flex-start
@@ -129,6 +155,18 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .s-steps
+    padding: 40px 0
+
+  .steps-wrap
+    flex-direction: column
+    margin-bottom: 0
+
+  .step-item
+    width: 100%
+    font-size: 20px
+    margin-bottom: 54px
+
   .s-form
     p
       margin-bottom: 30px
@@ -190,6 +228,22 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+
+  .s-steps
+    background-size: auto 100%
+    background-position: left top
+    .section-title
+      font-size: 25px
+
+  .steps-form
+    .form-labels-wrap
+      flex-wrap: wrap
+    label
+      width: 100%
+      margin-bottom: 30px
+    .btn
+      width: 100%
 
   .s-partners
     padding-top: 60px

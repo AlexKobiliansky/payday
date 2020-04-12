@@ -1,0 +1,73 @@
+.s-steps
+  background-image: url('../img/bg-steps.png')
+  +bg-cover
+  background-color: $accent-lightblue
+  padding-top: 55px
+  padding-bottom: 60px
+  counter-reset: step-item
+
+.steps-wrap
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 60px
+
+.step-item
+  position: relative
+  width: 25%
+  padding-right: 100px
+  font-size: 20px
+  font-weight: 700
+  counter-increment: step-item
+  span
+    position: relative
+    z-index: 2
+  &:before
+    content: counter(step-item)
+    position: absolute
+    font-weight: 700
+    line-height: 1
+    color: #fff
+    font-size: 90px
+    top: -25px
+    left: 0
+  &:after
+    content: ''
+    position: absolute
+    width: 2.5px
+    height: 2px
+    border-radius: 1px
+    background-color: $text
+    right: 136px
+    box-shadow: 13px 0 $text, 26px 0 $text, 39px 0 $text, 52px 0 $text, 65px 0 $text
+  &:nth-child(2)
+    &:after
+      right: 110px
+  &:nth-child(3)
+    &:after
+      right: 100px
+  &:last-child
+    padding-right: 0
+    &:after
+      display: none
+
+
+.steps-form
+  width: 850px
+  .form-labels-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  label
+    width: 457px
+    margin-bottom: 0
+  .btn
+    width: calc(100% - 490px)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 24px 30px 24px 25px
+  input
+    padding: 22px 25px
+    &::placeholder
+      color: rgba($text, .7)
