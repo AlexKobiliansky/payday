@@ -6,6 +6,13 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-features
+    padding-top: 50px
+
+  .feature-item
+    width: 400px
+    padding-right: 30px
+
   .s-how
     padding-top: 50px
     padding-bottom: 50px
@@ -169,6 +176,23 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-features
+    padding-top: 60px
+    .section-title
+      margin-bottom: 40px
+
+  .features-slider
+    width: calc(100% + 15px)
+
+  .feature-item
+    padding: 40px 20px
+    width: 214px
+    &-title
+      font-size: 16px
+      margin-bottom: 20px
+    &-desc
+      font-size: 14px
 
   .s-form
     padding: 40px 18px 10px
