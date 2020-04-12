@@ -76,6 +76,9 @@ ul
   box-shadow: none
   border: none
   cursor: pointer
+  &.disabled
+    filter: grayscale(.7)
+    pointer-events: none
 
 .btn-blue
   color: #fff
@@ -126,11 +129,143 @@ form
   .help-block
     display: none
 
+.popup-form
+  max-width: 377px
+  background-color: #fff
+  border-radius: 7px
+  display: block
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  padding: 28px 53px 35px 40px
+  h3
+    font-size: 20px
+    font-weight: 700
+    margin-bottom: 15px
+  p
+    font-size: 14px
+    color: rgba($text, .7)
+    margin-bottom: 30px
+  input
+    padding: 14px 20px
+    border: 1px solid rgba(#333A4C, .5)
+    &::placeholder
+      color: rgba($text, .5)
+  label
+    margin-bottom: 20px
+  .btn
+    width: 100%
+    margin-bottom: 20px
+    padding: 15px
+    line-height: 1.5
+  .jq-checkbox
+    width: 15px
+    height: 15px
+    background: #E5EDFD
+    margin-right: 5px
+    box-shadow: none
+    border: none
+  .checkbox-label
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 10px
+    color: rgba($text, .8)
+    span
+      width: calc(100% - 20px)
+  .jq-checkbox.checked .jq-checkbox__div
+    width: 14px
+    height: 11px
+    background-image: url('../img/icons/check-icon-blue.svg')
+    +bg-cover
+    transform: none
+    border: none
+    margin-left: 1px
+
+
 .section-title
   font-size: 35px
   line-height: 1.5
   font-weight: 700
   margin-bottom: 50px
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+.preloader
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 999
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $accent-lightblue
+
+.sk-chasing-dots
+  width: 4em
+  height: 4em
+  position: relative
+  margin: auto
+  text-align: center
+  animation: sk-chasing-dots-rotate 2s infinite linear
+
+.sk-chasing-dots .sk-child
+  width: 2em
+  height: 2em
+  display: inline-block
+  position: absolute
+  top: 0
+  background-color: $accent-blue
+  border-radius: 100%
+  animation: sk-chasing-dots-bounce 2s infinite ease-in-out
+
+.sk-chasing-dots .sk-dot-2
+  top: auto
+  bottom: 0
+  animation-delay: -1s
+
+
+@-webkit-keyframes sk-chasing-dots-rotate
+  100%
+    transform: rotate(360deg)
+
+@keyframes sk-chasing-dots-rotate
+  100%
+    transform: rotate(360deg)
+
+@-webkit-keyframes sk-chasing-dots-bounce
+  0%, 100%
+    transform: scale(0)
+  50%
+    transform: scale(1)
+
+@keyframes sk-chasing-dots-bounce
+  0%, 100%
+    transform: scale(0)
+  50%
+    transform: scale(1)
 
 
 
