@@ -235,6 +235,49 @@
 		</div>
 	</section>
 	<!-- ======= SECTION HOW END ======= -->
+
+	<!-- ======= SECTION FORM START ======= -->
+	<section class="s-form">
+		<div class="container">
+			<div class="s-form-content">
+				<h2 class="section-title">Уточним все вопросы</h2>
+				<p>Оставьте заявку, мы свяжемся с вами в течение нескольких минут и ответим на интересующие вас вопросы</p>
+			</div>
+			<form class="contact-form section-form">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="PAYDAY">
+				<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+				<input type="hidden" name="form_subject" value="Заявка с сайта PAYDAY">
+				<!-- END Hidden Required Fields -->
+
+				<div class="form-labels-wrap">
+					<label class="section-form-item field-label">
+						<span>Введите ваше имя</span>
+						<input id="test-input" type="text" placeholder="Алексей" name="Имя" autocomplete="off"
+							   data-validation="custom"
+							   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,50}$">
+					</label>
+
+					<label class="section-form-item field-label">
+						<span>Ваш номер телефона</span>
+						<input type="text" class="user-phone" name="Телефон" placeholder="+7 (999) 999-99-99"
+							   autocomplete="off" data-validation="custom"
+							   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+					</label>
+
+					<button type="submit" class="btn btn-dark section-form-item">Отправить</button>
+
+					<label class="checkbox-label section-form-item">
+						<input type="checkbox" required checked> <span>Согласен(а) на обработку персональных данных</span>
+					</label>
+
+
+				</div>
+
+			</form>
+		</div>
+	</section>
+	<!-- ======= SECTION FORM END ======= -->
 </div>
 
 

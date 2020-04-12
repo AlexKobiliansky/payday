@@ -1,0 +1,71 @@
+.s-form
+  background-color: $accent-blue
+  color: #fff
+  padding: 50px 0 14px
+  background-image: url('../img/bg-s-form.png')
+  background-repeat: no-repeat
+  background-position: right top
+  .section-title
+    margin-bottom: 14px
+  p
+    margin-bottom: 46px
+  &-content
+    width: 488px
+
+
+.section-form
+  width: 653px
+  .form-labels-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+  .section-form-item
+    margin-bottom: 26px
+    &:nth-child(odd)
+      width: 263px
+    &:nth-child(even)
+      width: calc(100% - 293px)
+  .field-label
+    position: relative
+    span
+      font-size: 12px
+      line-height: 1.5
+      color: $accent-blue
+      opacity: .7
+      position: absolute
+      top: 13px
+      left: 22px
+      z-index: 2
+    input
+      font-size: 18px
+      line-height: 1.5
+      font-weight: 700
+      padding: 36px 22px 12px
+      color: $text
+      &::placeholder
+        color: $text
+  .checkbox-label
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 12px
+    color: rgba(#fff, .8)
+    span
+      width: calc(100% - 27px)
+  .jq-checkbox
+    width: 15px
+    height: 15px
+    margin-right: 12px
+    background: #fff
+    box-shadow: none
+    border: none
+  .jq-checkbox.checked .jq-checkbox__div
+    border: none
+    width: 14px
+    height: 11px
+    +bg-cover
+    background-image: url('../img/icons/check-icon.svg')
+    transform: none
+    margin-left: 1px
+

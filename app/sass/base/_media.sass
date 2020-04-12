@@ -50,6 +50,9 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .section-form
+    width: 100%
+
   .how-item
     &-title
       font-size: 24px
@@ -105,6 +108,14 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .s-form
+    p
+      margin-bottom: 30px
+
+  .section-form
+    &-item
+      width: calc(50% - 15px)!important
+
   .how-item
     flex-direction: column
     &-img
@@ -158,6 +169,35 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-form
+    padding: 40px 18px 10px
+    background-size: auto 100%
+    background-position: -10% 10%
+    .section-title
+      margin-bottom: 10px
+      font-size: 20px
+    p
+      font-size: 12px
+      margin-bottom: 20px
+    &-content
+      width: 100%
+
+  .section-form
+    &-item
+      width: 100%!important
+    .field-label
+      span
+        display: none
+      input
+        font-size: 14px
+        color: rgba($text, .5)
+        padding: 17px 25px
+        font-weight: normal
+        &::placeholder
+          color: rgba($text, .5)
+    .btn
+      padding: 16px
 
   .s-how
     padding-top: 30px
