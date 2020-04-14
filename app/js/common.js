@@ -44,6 +44,10 @@ $(document).ready(function(){
     //***** end mobile-mnu customization *****//
 
 
+    $('.mm-menu nav a').click(function(){
+        API.close();
+    });
+
     function heightses() {
         $('.advantage-item-title').height('auto').equalHeights();
         $('.advantage-item-desc').height('auto').equalHeights();
@@ -76,7 +80,7 @@ $(document).ready(function(){
         dots: false,
         autoHeight: true,
         autoWidth: true,
-        loop: true,
+        loop: false,
         responsive : {
             0 : {
                 margin: 8
@@ -88,7 +92,8 @@ $(document).ready(function(){
     });
 
     $('.features-slider').owlCarousel({
-        nav: false,
+        nav: true,
+        navText: ['',''],
         items: 1,
         margin: 30,
         dots: false,
@@ -133,7 +138,7 @@ $(document).ready(function(){
 
 
     $(function() {
-        $("a[href='#popup-form']").magnificPopup({
+        $(".btn-popup").magnificPopup({
             type: "inline",
             fixedContentPos: !1,
             fixedBgPos: !0,
@@ -225,4 +230,42 @@ $(document).ready(function(){
             });
         }, 2000);
     }
+
+
+
+
+    $('.how-nav').click(function(e){
+        e.preventDefault();
+        var th = $(this);
+        var slide = $(this).attr('data-slide');
+        var currentSlide = $('.how-item.active');
+        var currentSlideId = currentSlide.attr("id");
+        var neddedSlide = $('#'+slide);
+
+        currentSlide.removeClass('active');
+
+        if(slide > currentSlideId) {
+            currentSlide.addClass('prev');
+        } else {
+            currentSlide.addClass('next');
+        }
+
+        neddedSlide.removeClass('prev').removeClass('next').addClass('active');
+
+
+        $('.how-nav').removeClass('active');
+        $('.how-nav-'+ slide).addClass('active');
+
+        console.log(slide)
+    })
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 10) {
+            $('.main-head').addClass('sticky');
+        } else {
+            $('.main-head').removeClass('sticky');
+        }
+    });
+
+    $(".main-mnu a, .foot-mnu a").mPageScroll2id();
 });

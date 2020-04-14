@@ -6,6 +6,10 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .features-slider
+    position: relative
+    .owl-nav
+      display: none
 
   .s-contacts
     padding-top: 60px
@@ -46,7 +50,7 @@
 
   .how-item
     &-content
-      width: 440px
+      width: 430px
 
   .s-advantages
     padding-top: 50px
@@ -76,6 +80,18 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .how-wrap
+    overflow: visible
+    height: 415px
+
+  .how-item:nth-child(3) .how-item-img img, .how-item:nth-child(4) .how-item-img img
+    width: 220px
+
+  .how-item
+    &-img
+      img
+        width: 200px
 
   .foot-item-2
     display: none
@@ -153,8 +169,13 @@
   .intro-img
     width: 300px
 
+  .s-intro
+    padding-top: 57px
+
   .hamburger
     display: block
+    position: relative
+    top: -2px
   .main-mnu
     display: none
 
@@ -164,6 +185,12 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .how-wrap
+    height: 600px
+
+  .how-item
+    width: 100%
 
   .main-foot
     padding-top: 30px
@@ -265,6 +292,9 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .how-wrap
+    height: 500px
 
   #map
     width: calc(100% + 30px)

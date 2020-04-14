@@ -19,7 +19,7 @@
   margin-right: 30px
   &:last-child
     margin-right: 0
-  &:hover
+  &:hover, &.active
     background-color: $accent-blue
     color: #fff
 
@@ -60,9 +60,77 @@
     img
       position: relative
       z-index: 3
+      width: 230px
+      max-width: none
+  &:nth-child(3)
+    .how-item-img
+      img
+        width: 290px
+  &:nth-child(4)
+    .how-item-img
+      left: -66px
+      position: relative
+      img
+        width: 365px
+
 
 .how-navs-slider
   margin-bottom: 40px
 
+//animations
+.how-wrap
+  position: relative
+  height: 470px
+  overflow: hidden
 
+.how-item
+  position: absolute
+  top: 0
+  +mt(2.5s)
+  transition-delay: .5s
+  &.active
+    left: 0
+    .how-item-title
+      left: 0
+    .how-item-desc
+      left: 0
+    .how-item-img
+      left: 0
+
+
+  &.next
+    left: 100%
+    transition-delay: .2s
+    .how-item-title
+      left: 500px
+    .how-item-desc
+      left: 500px
+    .how-item-img
+      left: 200px
+      &:before, &:after
+        transform: rotate(90deg)
+
+
+
+
+  &.prev
+    left: -100%
+    .how-item-title
+      left: -400px
+    .how-item-desc
+      left: -400px
+    .how-item-img
+      left: -500px
+      &:before, &:after
+        transform: rotate(90deg)
+  &-title
+    +mt(2s)
+    position: relative
+  &-desc
+    +mt(2.5s)
+    position: relative
+  &-img
+    +mt(3s)
+    &:before, &:after
+      +mt(3s)
 
